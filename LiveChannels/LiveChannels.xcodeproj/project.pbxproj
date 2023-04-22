@@ -3,153 +3,241 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0552C49029F2500C00A4EAD5 /* LiveChannelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552C48F29F2500C00A4EAD5 /* LiveChannelsApp.swift */; };
-		0552C49229F2500C00A4EAD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552C49129F2500C00A4EAD5 /* ContentView.swift */; };
-		0552C49429F2502100A4EAD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0552C49329F2502100A4EAD5 /* Assets.xcassets */; };
-		0552C49729F2502100A4EAD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0552C49629F2502100A4EAD5 /* Preview Assets.xcassets */; };
-		0552C4A229F2502200A4EAD5 /* LiveChannelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552C4A129F2502200A4EAD5 /* LiveChannelsTests.swift */; };
-		0552C4AD29F2502200A4EAD5 /* LiveChannelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552C4AC29F2502200A4EAD5 /* LiveChannelsUITests.swift */; };
-		0552C4FB29F255C100A4EAD5 /* Mini in Frameworks */ = {isa = PBXBuildFile; productRef = 0552C4FA29F255C100A4EAD5 /* Mini */; };
-		0552C4FD29F255C100A4EAD5 /* MiniPromise in Frameworks */ = {isa = PBXBuildFile; productRef = 0552C4FC29F255C100A4EAD5 /* MiniPromise */; };
-		0552C4FF29F255C100A4EAD5 /* MiniTask in Frameworks */ = {isa = PBXBuildFile; productRef = 0552C4FE29F255C100A4EAD5 /* MiniTask */; };
-		0552C50129F255C100A4EAD5 /* Mini/Log in Frameworks */ = {isa = PBXBuildFile; productRef = 0552C50029F255C100A4EAD5 /* Mini/Log */; };
-		0552C50329F255C100A4EAD5 /* Mini/Test in Frameworks */ = {isa = PBXBuildFile; productRef = 0552C50229F255C100A4EAD5 /* Mini/Test */; };
+		0553CD8D29F3DE0800AB1639 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0553CD8C29F3DE0800AB1639 /* Channel.swift */; };
+		0553CD9129F3EC0A00AB1639 /* LiveProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0553CD9029F3EC0A00AB1639 /* LiveProgram.swift */; };
+		0553CD9429F3EC6F00AB1639 /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0553CD9329F3EC6F00AB1639 /* Channels.swift */; };
+		08A5621C2E93F6CD5B03BE17 /* Pods_LiveChannels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1374940A2F9878FD9817F51 /* Pods_LiveChannels.framework */; };
+		B60FEE9829F33889005824AF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FEE9729F33889005824AF /* Request.swift */; };
+		B60FEE9B29F338F7005824AF /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FEE9A29F338F7005824AF /* URLSession+Extension.swift */; };
+		B60FEE9D29F3392C005824AF /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FEE9C29F3392C005824AF /* APIError.swift */; };
+		B60FEE9F29F3394D005824AF /* ContentRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FEE9E29F3394D005824AF /* ContentRequests.swift */; };
+		B60FEEA629F33ADF005824AF /* MovistarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FEEA529F33ADF005824AF /* MovistarAPI.swift */; };
+		B6550CB729F2D3A200267128 /* LiveChannelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CB629F2D3A200267128 /* LiveChannelsApp.swift */; };
+		B6550CB929F2D3A200267128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CB829F2D3A200267128 /* ContentView.swift */; };
+		B6550CBB29F2D3A400267128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6550CBA29F2D3A400267128 /* Assets.xcassets */; };
+		B6550CBE29F2D3A400267128 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6550CBD29F2D3A400267128 /* Preview Assets.xcassets */; };
+		B6550CC729F2D41C00267128 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CC629F2D41C00267128 /* MainRouter.swift */; };
+		B6550CCE29F2D49A00267128 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CCA29F2D49900267128 /* Stack.swift */; };
+		B6550CD329F2D5D100267128 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CD229F2D5D100267128 /* View+Extension.swift */; };
+		B6550CD529F2D5E900267128 /* URLRequest+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CD429F2D5E900267128 /* URLRequest+Extension.swift */; };
+		B6550CD729F2D5F300267128 /* HTTPURLResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CD629F2D5F300267128 /* HTTPURLResponse+Extension.swift */; };
+		B6550CDA29F2D75A00267128 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CD929F2D75A00267128 /* MainScreen.swift */; };
+		B6550CDC29F2D83400267128 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CDB29F2D83400267128 /* MainViewModel.swift */; };
+		B6550CDE29F2D87B00267128 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CDD29F2D87B00267128 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0552C49E29F2502200A4EAD5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0552C48429F2500C00A4EAD5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0552C48B29F2500C00A4EAD5;
-			remoteInfo = LiveChannels;
-		};
-		0552C4A929F2502200A4EAD5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0552C48429F2500C00A4EAD5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0552C48B29F2500C00A4EAD5;
-			remoteInfo = LiveChannels;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0552C48C29F2500C00A4EAD5 /* LiveChannels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveChannels.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0552C48F29F2500C00A4EAD5 /* LiveChannelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsApp.swift; sourceTree = "<group>"; };
-		0552C49129F2500C00A4EAD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0552C49329F2502100A4EAD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0552C49629F2502100A4EAD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0552C49829F2502100A4EAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0552C49D29F2502200A4EAD5 /* LiveChannelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveChannelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0552C4A129F2502200A4EAD5 /* LiveChannelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsTests.swift; sourceTree = "<group>"; };
-		0552C4A329F2502200A4EAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0552C4A829F2502200A4EAD5 /* LiveChannelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveChannelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0552C4AC29F2502200A4EAD5 /* LiveChannelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsUITests.swift; sourceTree = "<group>"; };
-		0552C4AE29F2502200A4EAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0553CD8C29F3DE0800AB1639 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		0553CD9029F3EC0A00AB1639 /* LiveProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveProgram.swift; sourceTree = "<group>"; };
+		0553CD9329F3EC6F00AB1639 /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
+		B60FEE9729F33889005824AF /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B60FEE9A29F338F7005824AF /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		B60FEE9C29F3392C005824AF /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		B60FEE9E29F3394D005824AF /* ContentRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRequests.swift; sourceTree = "<group>"; };
+		B60FEEA529F33ADF005824AF /* MovistarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovistarAPI.swift; sourceTree = "<group>"; };
+		B6550CB329F2D3A200267128 /* LiveChannels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveChannels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6550CB629F2D3A200267128 /* LiveChannelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsApp.swift; sourceTree = "<group>"; };
+		B6550CB829F2D3A200267128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B6550CBA29F2D3A400267128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6550CBD29F2D3A400267128 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B6550CC629F2D41C00267128 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		B6550CCA29F2D49900267128 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		B6550CD229F2D5D100267128 /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "View+Extension.swift"; path = "View/View+Extension.swift"; sourceTree = "<group>"; };
+		B6550CD429F2D5E900267128 /* URLRequest+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URLRequest+Extension.swift"; path = "URLRequest/URLRequest+Extension.swift"; sourceTree = "<group>"; };
+		B6550CD629F2D5F300267128 /* HTTPURLResponse+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HTTPURLResponse+Extension.swift"; path = "HTTPURLResponse/HTTPURLResponse+Extension.swift"; sourceTree = "<group>"; };
+		B6550CD929F2D75A00267128 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		B6550CDB29F2D83400267128 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B6550CDD29F2D87B00267128 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		D687F2789C98C10A21E55577 /* Pods-LiveChannels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveChannels.debug.xcconfig"; path = "Target Support Files/Pods-LiveChannels/Pods-LiveChannels.debug.xcconfig"; sourceTree = "<group>"; };
+		E1374940A2F9878FD9817F51 /* Pods_LiveChannels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveChannels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6516C368F507DE758E9C3F0 /* Pods-LiveChannels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveChannels.release.xcconfig"; path = "Target Support Files/Pods-LiveChannels/Pods-LiveChannels.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0552C48929F2500C00A4EAD5 /* Frameworks */ = {
+		B6550CB029F2D3A200267128 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0552C50329F255C100A4EAD5 /* Mini/Test in Frameworks */,
-				0552C4FF29F255C100A4EAD5 /* MiniTask in Frameworks */,
-				0552C4FB29F255C100A4EAD5 /* Mini in Frameworks */,
-				0552C50129F255C100A4EAD5 /* Mini/Log in Frameworks */,
-				0552C4FD29F255C100A4EAD5 /* MiniPromise in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0552C49A29F2502200A4EAD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0552C4A529F2502200A4EAD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				08A5621C2E93F6CD5B03BE17 /* Pods_LiveChannels.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0552C48329F2500C00A4EAD5 = {
+		0553CD8B29F3DDEC00AB1639 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0552C48E29F2500C00A4EAD5 /* LiveChannels */,
-				0552C4A029F2502200A4EAD5 /* LiveChannelsTests */,
-				0552C4AB29F2502200A4EAD5 /* LiveChannelsUITests */,
-				0552C48D29F2500C00A4EAD5 /* Products */,
+				0553CD8C29F3DE0800AB1639 /* Channel.swift */,
+				0553CD9029F3EC0A00AB1639 /* LiveProgram.swift */,
+				0553CD9329F3EC6F00AB1639 /* Channels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0553CDA429F3F39700AB1639 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		18A0C118314A05D021E71C05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1374940A2F9878FD9817F51 /* Pods_LiveChannels.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7958A7FBC209B25D5E29A296 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D687F2789C98C10A21E55577 /* Pods-LiveChannels.debug.xcconfig */,
+				F6516C368F507DE758E9C3F0 /* Pods-LiveChannels.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B60FEE9329F337C3005824AF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B60FEE9429F337F5005824AF /* API */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B60FEE9429F337F5005824AF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B60FEE9529F3383A005824AF /* Request */,
+				B60FEEA529F33ADF005824AF /* MovistarAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B60FEE9529F3383A005824AF /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B60FEE9629F33867005824AF /* Base */,
+				B60FEE9C29F3392C005824AF /* APIError.swift */,
+				B60FEE9E29F3394D005824AF /* ContentRequests.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B60FEE9629F33867005824AF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B60FEE9929F338E6005824AF /* Extension */,
+				B60FEE9729F33889005824AF /* Request.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B60FEE9929F338E6005824AF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B60FEE9A29F338F7005824AF /* URLSession+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B6550CAA29F2D3A200267128 = {
+			isa = PBXGroup;
+			children = (
+				B6550CB529F2D3A200267128 /* LiveChannels */,
+				B6550CB429F2D3A200267128 /* Products */,
+				7958A7FBC209B25D5E29A296 /* Pods */,
+				18A0C118314A05D021E71C05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		0552C48D29F2500C00A4EAD5 /* Products */ = {
+		B6550CB429F2D3A200267128 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0552C48C29F2500C00A4EAD5 /* LiveChannels.app */,
-				0552C49D29F2502200A4EAD5 /* LiveChannelsTests.xctest */,
-				0552C4A829F2502200A4EAD5 /* LiveChannelsUITests.xctest */,
+				B6550CB329F2D3A200267128 /* LiveChannels.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0552C48E29F2500C00A4EAD5 /* LiveChannels */ = {
+		B6550CB529F2D3A200267128 /* LiveChannels */ = {
 			isa = PBXGroup;
 			children = (
-				0552C48F29F2500C00A4EAD5 /* LiveChannelsApp.swift */,
-				0552C49129F2500C00A4EAD5 /* ContentView.swift */,
-				0552C49329F2502100A4EAD5 /* Assets.xcassets */,
-				0552C49829F2502100A4EAD5 /* Info.plist */,
-				0552C49529F2502100A4EAD5 /* Preview Content */,
+				0553CDA429F3F39700AB1639 /* Components */,
+				B60FEE9329F337C3005824AF /* Network */,
+				B6550CC829F2D46300267128 /* Extensions */,
+				B6550CC429F2D3E800267128 /* Modules */,
+				B6550CB629F2D3A200267128 /* LiveChannelsApp.swift */,
+				B6550CB829F2D3A200267128 /* ContentView.swift */,
+				B6550CBA29F2D3A400267128 /* Assets.xcassets */,
+				B6550CBC29F2D3A400267128 /* Preview Content */,
 			);
 			path = LiveChannels;
 			sourceTree = "<group>";
 		};
-		0552C49529F2502100A4EAD5 /* Preview Content */ = {
+		B6550CBC29F2D3A400267128 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				0552C49629F2502100A4EAD5 /* Preview Assets.xcassets */,
+				B6550CBD29F2D3A400267128 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0552C4A029F2502200A4EAD5 /* LiveChannelsTests */ = {
+		B6550CC429F2D3E800267128 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0552C4A129F2502200A4EAD5 /* LiveChannelsTests.swift */,
-				0552C4A329F2502200A4EAD5 /* Info.plist */,
+				B6550CC529F2D3F200267128 /* Main */,
+				B6550CC629F2D41C00267128 /* MainRouter.swift */,
+				B6550CDD29F2D87B00267128 /* BaseViewModel.swift */,
 			);
-			path = LiveChannelsTests;
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		0552C4AB29F2502200A4EAD5 /* LiveChannelsUITests */ = {
+		B6550CC529F2D3F200267128 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				0552C4AC29F2502200A4EAD5 /* LiveChannelsUITests.swift */,
-				0552C4AE29F2502200A4EAD5 /* Info.plist */,
+				0553CD8B29F3DDEC00AB1639 /* Model */,
+				B6550CD829F2D74C00267128 /* UI */,
 			);
-			path = LiveChannelsUITests;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B6550CC829F2D46300267128 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6550CD629F2D5F300267128 /* HTTPURLResponse+Extension.swift */,
+				B6550CD429F2D5E900267128 /* URLRequest+Extension.swift */,
+				B6550CD229F2D5D100267128 /* View+Extension.swift */,
+				B6550CCA29F2D49900267128 /* Stack.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B6550CD829F2D74C00267128 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B6550CD929F2D75A00267128 /* MainScreen.swift */,
+				B6550CDB29F2D83400267128 /* MainViewModel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0552C48B29F2500C00A4EAD5 /* LiveChannels */ = {
+		B6550CB229F2D3A200267128 /* LiveChannels */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0552C4B129F2502200A4EAD5 /* Build configuration list for PBXNativeTarget "LiveChannels" */;
+			buildConfigurationList = B6550CC129F2D3A400267128 /* Build configuration list for PBXNativeTarget "LiveChannels" */;
 			buildPhases = (
-				0552C48829F2500C00A4EAD5 /* Sources */,
-				0552C48929F2500C00A4EAD5 /* Frameworks */,
-				0552C48A29F2500C00A4EAD5 /* Resources */,
+				B25CA29AB0FBF391A4CF427F /* [CP] Check Pods Manifest.lock */,
+				B6550CAF29F2D3A200267128 /* Sources */,
+				B6550CB029F2D3A200267128 /* Frameworks */,
+				B6550CB129F2D3A200267128 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -157,75 +245,27 @@
 			);
 			name = LiveChannels;
 			packageProductDependencies = (
-				0552C4FA29F255C100A4EAD5 /* Mini */,
-				0552C4FC29F255C100A4EAD5 /* MiniPromise */,
-				0552C4FE29F255C100A4EAD5 /* MiniTask */,
-				0552C50029F255C100A4EAD5 /* Mini/Log */,
-				0552C50229F255C100A4EAD5 /* Mini/Test */,
 			);
 			productName = LiveChannels;
-			productReference = 0552C48C29F2500C00A4EAD5 /* LiveChannels.app */;
+			productReference = B6550CB329F2D3A200267128 /* LiveChannels.app */;
 			productType = "com.apple.product-type.application";
-		};
-		0552C49C29F2502200A4EAD5 /* LiveChannelsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0552C4B429F2502200A4EAD5 /* Build configuration list for PBXNativeTarget "LiveChannelsTests" */;
-			buildPhases = (
-				0552C49929F2502200A4EAD5 /* Sources */,
-				0552C49A29F2502200A4EAD5 /* Frameworks */,
-				0552C49B29F2502200A4EAD5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0552C49F29F2502200A4EAD5 /* PBXTargetDependency */,
-			);
-			name = LiveChannelsTests;
-			productName = LiveChannelsTests;
-			productReference = 0552C49D29F2502200A4EAD5 /* LiveChannelsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0552C4A729F2502200A4EAD5 /* LiveChannelsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0552C4B729F2502200A4EAD5 /* Build configuration list for PBXNativeTarget "LiveChannelsUITests" */;
-			buildPhases = (
-				0552C4A429F2502200A4EAD5 /* Sources */,
-				0552C4A529F2502200A4EAD5 /* Frameworks */,
-				0552C4A629F2502200A4EAD5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0552C4AA29F2502200A4EAD5 /* PBXTargetDependency */,
-			);
-			name = LiveChannelsUITests;
-			productName = LiveChannelsUITests;
-			productReference = 0552C4A829F2502200A4EAD5 /* LiveChannelsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0552C48429F2500C00A4EAD5 /* Project object */ = {
+		B6550CAB29F2D3A200267128 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					0552C48B29F2500C00A4EAD5 = {
-						CreatedOnToolsVersion = 12.4;
-					};
-					0552C49C29F2502200A4EAD5 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 0552C48B29F2500C00A4EAD5;
-					};
-					0552C4A729F2502200A4EAD5 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 0552C48B29F2500C00A4EAD5;
+					B6550CB229F2D3A200267128 = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 0552C48729F2500C00A4EAD5 /* Build configuration list for PBXProject "LiveChannels" */;
+			buildConfigurationList = B6550CAE29F2D3A200267128 /* Build configuration list for PBXProject "LiveChannels" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -233,97 +273,91 @@
 				en,
 				Base,
 			);
-			mainGroup = 0552C48329F2500C00A4EAD5;
+			mainGroup = B6550CAA29F2D3A200267128;
 			packageReferences = (
-				0552C4F929F255C100A4EAD5 /* XCRemoteSwiftPackageReference "mini-swift" */,
 			);
-			productRefGroup = 0552C48D29F2500C00A4EAD5 /* Products */;
+			productRefGroup = B6550CB429F2D3A200267128 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0552C48B29F2500C00A4EAD5 /* LiveChannels */,
-				0552C49C29F2502200A4EAD5 /* LiveChannelsTests */,
-				0552C4A729F2502200A4EAD5 /* LiveChannelsUITests */,
+				B6550CB229F2D3A200267128 /* LiveChannels */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0552C48A29F2500C00A4EAD5 /* Resources */ = {
+		B6550CB129F2D3A200267128 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0552C49729F2502100A4EAD5 /* Preview Assets.xcassets in Resources */,
-				0552C49429F2502100A4EAD5 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0552C49B29F2502200A4EAD5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0552C4A629F2502200A4EAD5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				B6550CBE29F2D3A400267128 /* Preview Assets.xcassets in Resources */,
+				B6550CBB29F2D3A400267128 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B25CA29AB0FBF391A4CF427F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveChannels-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		0552C48829F2500C00A4EAD5 /* Sources */ = {
+		B6550CAF29F2D3A200267128 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0552C49229F2500C00A4EAD5 /* ContentView.swift in Sources */,
-				0552C49029F2500C00A4EAD5 /* LiveChannelsApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0552C49929F2502200A4EAD5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0552C4A229F2502200A4EAD5 /* LiveChannelsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0552C4A429F2502200A4EAD5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0552C4AD29F2502200A4EAD5 /* LiveChannelsUITests.swift in Sources */,
+				B6550CDA29F2D75A00267128 /* MainScreen.swift in Sources */,
+				B6550CDE29F2D87B00267128 /* BaseViewModel.swift in Sources */,
+				B60FEE9D29F3392C005824AF /* APIError.swift in Sources */,
+				0553CD9429F3EC6F00AB1639 /* Channels.swift in Sources */,
+				B6550CCE29F2D49A00267128 /* Stack.swift in Sources */,
+				0553CD8D29F3DE0800AB1639 /* Channel.swift in Sources */,
+				B60FEE9B29F338F7005824AF /* URLSession+Extension.swift in Sources */,
+				B6550CD529F2D5E900267128 /* URLRequest+Extension.swift in Sources */,
+				B60FEEA629F33ADF005824AF /* MovistarAPI.swift in Sources */,
+				B6550CB929F2D3A200267128 /* ContentView.swift in Sources */,
+				B6550CD329F2D5D100267128 /* View+Extension.swift in Sources */,
+				B60FEE9829F33889005824AF /* Request.swift in Sources */,
+				B6550CB729F2D3A200267128 /* LiveChannelsApp.swift in Sources */,
+				B6550CC729F2D41C00267128 /* MainRouter.swift in Sources */,
+				0553CD9129F3EC0A00AB1639 /* LiveProgram.swift in Sources */,
+				B60FEE9F29F3394D005824AF /* ContentRequests.swift in Sources */,
+				B6550CD729F2D5F300267128 /* HTTPURLResponse+Extension.swift in Sources */,
+				B6550CDC29F2D83400267128 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		0552C49F29F2502200A4EAD5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0552C48B29F2500C00A4EAD5 /* LiveChannels */;
-			targetProxy = 0552C49E29F2502200A4EAD5 /* PBXContainerItemProxy */;
-		};
-		0552C4AA29F2502200A4EAD5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0552C48B29F2500C00A4EAD5 /* LiveChannels */;
-			targetProxy = 0552C4A929F2502200A4EAD5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		0552C4AF29F2502200A4EAD5 /* Debug */ = {
+		B6550CBF29F2D3A400267128 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -367,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -377,14 +411,13 @@
 			};
 			name = Debug;
 		};
-		0552C4B029F2502200A4EAD5 /* Release */ = {
+		B6550CC029F2D3A400267128 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -422,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,213 +465,90 @@
 			};
 			name = Release;
 		};
-		0552C4B229F2502200A4EAD5 /* Debug */ = {
+		B6550CC229F2D3A400267128 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D687F2789C98C10A21E55577 /* Pods-LiveChannels.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiveChannels/Preview Content\"";
 				DEVELOPMENT_TEAM = L3LXP6A8G3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = LiveChannels/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marlon.LiveChannels.LiveChannels;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marlon.liveChannels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		0552C4B329F2502200A4EAD5 /* Release */ = {
+		B6550CC329F2D3A400267128 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6516C368F507DE758E9C3F0 /* Pods-LiveChannels.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LiveChannels/Preview Content\"";
 				DEVELOPMENT_TEAM = L3LXP6A8G3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = LiveChannels/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marlon.LiveChannels.LiveChannels;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marlon.liveChannels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		0552C4B529F2502200A4EAD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L3LXP6A8G3;
-				INFOPLIST_FILE = LiveChannelsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marlon.LiveChannels.LiveChannelsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveChannels.app/LiveChannels";
-			};
-			name = Debug;
-		};
-		0552C4B629F2502200A4EAD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L3LXP6A8G3;
-				INFOPLIST_FILE = LiveChannelsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marlon.LiveChannels.LiveChannelsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LiveChannels.app/LiveChannels";
-			};
-			name = Release;
-		};
-		0552C4B829F2502200A4EAD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L3LXP6A8G3;
-				INFOPLIST_FILE = LiveChannelsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marlon.LiveChannels.LiveChannelsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LiveChannels;
-			};
-			name = Debug;
-		};
-		0552C4B929F2502200A4EAD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L3LXP6A8G3;
-				INFOPLIST_FILE = LiveChannelsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marlon.LiveChannels.LiveChannelsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LiveChannels;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0552C48729F2500C00A4EAD5 /* Build configuration list for PBXProject "LiveChannels" */ = {
+		B6550CAE29F2D3A200267128 /* Build configuration list for PBXProject "LiveChannels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0552C4AF29F2502200A4EAD5 /* Debug */,
-				0552C4B029F2502200A4EAD5 /* Release */,
+				B6550CBF29F2D3A400267128 /* Debug */,
+				B6550CC029F2D3A400267128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0552C4B129F2502200A4EAD5 /* Build configuration list for PBXNativeTarget "LiveChannels" */ = {
+		B6550CC129F2D3A400267128 /* Build configuration list for PBXNativeTarget "LiveChannels" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0552C4B229F2502200A4EAD5 /* Debug */,
-				0552C4B329F2502200A4EAD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0552C4B429F2502200A4EAD5 /* Build configuration list for PBXNativeTarget "LiveChannelsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0552C4B529F2502200A4EAD5 /* Debug */,
-				0552C4B629F2502200A4EAD5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0552C4B729F2502200A4EAD5 /* Build configuration list for PBXNativeTarget "LiveChannelsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0552C4B829F2502200A4EAD5 /* Debug */,
-				0552C4B929F2502200A4EAD5 /* Release */,
+				B6550CC229F2D3A400267128 /* Debug */,
+				B6550CC329F2D3A400267128 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0552C4F929F255C100A4EAD5 /* XCRemoteSwiftPackageReference "mini-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hyperdevs-team/mini-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.4;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0552C4FA29F255C100A4EAD5 /* Mini */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0552C4F929F255C100A4EAD5 /* XCRemoteSwiftPackageReference "mini-swift" */;
-			productName = Mini;
-		};
-		0552C4FC29F255C100A4EAD5 /* MiniPromise */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0552C4F929F255C100A4EAD5 /* XCRemoteSwiftPackageReference "mini-swift" */;
-			productName = MiniPromise;
-		};
-		0552C4FE29F255C100A4EAD5 /* MiniTask */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0552C4F929F255C100A4EAD5 /* XCRemoteSwiftPackageReference "mini-swift" */;
-			productName = MiniTask;
-		};
-		0552C50029F255C100A4EAD5 /* Mini/Log */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0552C4F929F255C100A4EAD5 /* XCRemoteSwiftPackageReference "mini-swift" */;
-			productName = Mini/Log;
-		};
-		0552C50229F255C100A4EAD5 /* Mini/Test */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0552C4F929F255C100A4EAD5 /* XCRemoteSwiftPackageReference "mini-swift" */;
-			productName = Mini/Test;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 0552C48429F2500C00A4EAD5 /* Project object */;
+	rootObject = B6550CAB29F2D3A200267128 /* Project object */;
 }

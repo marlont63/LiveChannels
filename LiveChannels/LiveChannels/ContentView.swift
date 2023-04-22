@@ -2,15 +2,20 @@
 //  ContentView.swift
 //  LiveChannels
 //
-//  Created by Marlon Raschid Tavarez Parra on 21/04/2023.
+//  Created by Marlon Tavarez Parra on 21/4/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text("Hello, world!")
+        }
+        .padding()
     }
 }
 
