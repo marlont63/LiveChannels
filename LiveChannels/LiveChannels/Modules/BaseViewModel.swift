@@ -20,7 +20,10 @@ public class BaseViewModel: NSObject {
             cancelable.cancel()
         }
     }
+    
+    func getLiveProgramPercentage(startTime: String, endTime: String, currentTime: Int) -> Double {
+        (currentTime.double - startTime.double) / (endTime.double - startTime.double)
+    }
 }
-
 
 struct APIClient: API {}

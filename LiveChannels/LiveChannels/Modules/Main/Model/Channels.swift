@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct Channels: Codable {
+struct LiveChannels: Codable {
     let channels: [Channel]
+    let currentTime: Int
 }

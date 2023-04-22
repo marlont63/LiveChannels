@@ -11,7 +11,7 @@ import Combine
 
 public enum PublicPages {
     case mainScreen
-    case channelDetailsScreen
+    case channelDetailsScreen(withCurrentTime: Int)
 }
 
 public enum GenericAlerts {
@@ -68,8 +68,18 @@ class NavigationGraph: ObservableObject {
         switch publicPages {
         case .mainScreen:
             return mainScreen.eraseToAnyView()
-        case .channelDetailsScreen:
-            return EmptyView().eraseToAnyView()
+        case .channelDetailsScreen(withCurrentTime: let currentTime):
+            let channelDetailsViewModel: ChannelDetailsViewModel = ChannelDetailsViewModel(currentTime: currentTime)
+            return ChannelDetailsScreen(
+                channelDetailsViewModel: channelDetailsViewModel,
+                goBack: {
+                    self.dismiss()
+                    channelDetailsViewModel.resetViewModel()
+                }, showGenericError: {
+                    self.show(alert: .genericError(accept: {
+                        channelDetailsViewModel.resetViewModel()
+                    }))
+                }).eraseToAnyView()
         }
     }
 
@@ -114,8 +124,13 @@ class NavigationGraph: ObservableObject {
     }
 
     // MARK: - Constructors
-    
     private func toMainScreen() -> MainScreen {
-        MainScreen(mainViewModel: mainViewModel)
+        MainScreen(
+            mainViewModel: mainViewModel,
+            goToDetailView: { currentTime in
+                self.present(view: .channelDetailsScreen(withCurrentTime: currentTime))
+            }, showGenericError: {
+                self.show(alert: .genericError(accept: {}))
+            })
     }
 }

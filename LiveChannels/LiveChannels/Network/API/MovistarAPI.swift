@@ -9,13 +9,18 @@ import Foundation
 import Combine
 
 protocol MovistarAPI {
-    func getLiveChannels() -> AnyPublisher<Channels, Error>
+    func getLiveChannels() -> AnyPublisher<LiveChannels, Error>
+    func getLiveChannelDetails() -> AnyPublisher<ChannelDetails, Error>
 }
 
 
 extension MovistarAPI {
-    func getLiveChannels() -> AnyPublisher<Channels, Error> {
+    func getLiveChannels() -> AnyPublisher<LiveChannels, Error> {
         return URLSession.shared.publisher(using: GetLiveChannelsRequest())
+    }
+    
+    func getLiveChannelDetails() -> AnyPublisher<ChannelDetails, Error> {
+        return URLSession.shared.publisher(using: GetLiveChannelDetailsReuqest())
     }
 }
  

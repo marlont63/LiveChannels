@@ -11,36 +11,95 @@ import SwiftUI
 struct MainScreen: View {
     
     @ObservedObject var mainViewModel: MainViewModel
+    var goToDetailView: (_ currentTime: Int) -> Void
+    var showGenericError: () -> Void
     
     var body: some View {
-        VStack() {
+        VStack(spacing: .zero) {
             ScrollView(.vertical, showsIndicators: false) {
-                if let channels: [Channel] = mainViewModel.liveChannels?.channels {
-                    ForEach(channels, id: \.id) { channel in
-                        HStack(spacing: .zero) {
-                            VStack(spacing: .zero) {
-                                Text(channel.name)
-                                Text(channel.liveProgram.startTime)
-                                Text(channel.liveProgram.endTime)
+                switch mainViewModel.liveChannelsViewData.status {
+                case .running:
+                    LoadingView()
+                case .success:
+                    if let liveChannelsBasicData: LiveChannelsBasicData = mainViewModel.liveChannelsViewData.data {
+                        ForEach(liveChannelsBasicData.channels, id: \.id) { (channel: Channel) in
+                            ChannelCardView(
+                                channel: channel,
+                                liveProgramPercentage: mainViewModel.getLiveProgramPercentage(
+                                    startTime: channel.liveProgram.startTime,
+                                    endTime: channel.liveProgram.endTime,
+                                    currentTime: liveChannelsBasicData.currentTime
+                                )
+                            )
+                            .onTapGesture {
+                                if mainViewModel.isChannelAvailableToOpen(liveProgramId: "\(channel.liveProgram.id)") {
+                                    goToDetailView(liveChannelsBasicData.currentTime)
+                                } else {
+                                    showGenericError()
+                                }
                             }
                         }
-                        .cornerRadius(4.0)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .padding(.bottom, 5)
-                        .padding(.horizontal, 16)
                     }
+                case .error:
+                    Spacer()
+                        .onAppear() {
+                            showGenericError()
+                        }
+                case .idle:
+                    Spacer()
                 }
             }
-            
-//            Color.red
-//            HStack(spacing: .zero) {
-//                Text("Total Channels \(mainViewModel.liveChannels?.channels.count ?? 0)")
-//            }
+            .padding(.top, 80)
         }
         .edgesIgnoringSafeArea(.all)
         .onAppear(perform: {
             mainViewModel.getLiveChannels()
         })
+    }
+}
+
+struct ChannelCardView: View {
+    
+    var channel: Channel
+    var liveProgramPercentage: Double
+    
+    var body: some View {
+        HStack(spacing: .zero) {
+            if let imageURL: URL = URL(string: channel.logo) {
+                ImageFromUrl(url: imageURL, isGeometryFrameUsed: true)
+                    .frame(width: 100, height: 100)
+            }
+            VStack(alignment: .leading, spacing: .zero) {
+                Text(channel.name)
+                    .font(
+                        .largeTitle
+                        .weight(.bold)
+                    )
+                    .foregroundColor(.white)
+                Text(channel.liveProgram.title)
+                    .font(
+                        .custom(
+                        "AmericanTypewriter",
+                        fixedSize: 15)
+                    )
+                    .foregroundColor(.white)
+                    .padding(.bottom, 10)
+                
+                LinearProgressBar(
+                    value: liveProgramPercentage,
+                    maxValue: Constants.totalProgress,
+                    backgroundColor: .gray,
+                    foregroundColor: .green
+                )
+                .frame(height: 6)
+            }
+            .padding(.horizontal, 10)
+            .padding(.vertical , 10)
+        }
+        .frame(maxWidth: .infinity)
+        .background(Color.blue)
+        .cornerRadius(4.0)
+        .padding(.bottom, 5)
+        .padding(.horizontal, 16)
     }
 }

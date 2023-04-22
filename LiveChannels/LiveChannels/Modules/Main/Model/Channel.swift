@@ -9,12 +9,14 @@ import Foundation
 
 struct Channel: Codable {
     let id: Int
+    let logo: String
     let title: String?
     let name: String
     let liveProgram: LiveProgram
     
     enum CodingKeys: String, CodingKey {
         case id
+        case logo
         case title
         case name
         case liveProgram = "live_program"

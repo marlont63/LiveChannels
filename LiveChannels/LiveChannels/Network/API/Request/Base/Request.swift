@@ -40,7 +40,7 @@ protocol Request {
 
 
 extension Request {
-    var endpoint: String { "https://api.npoint.io/f5552c061b8cf68cffa0/\(path)"}
+    var endpoint: String { "https://api.npoint.io/\(path)"}
     
     var urlRequest: URLRequest {
         var components:URLComponents = URLComponents(string: self.endpoint)!
