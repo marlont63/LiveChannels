@@ -80,9 +80,7 @@ struct ChannelCardView: View {
                     .foregroundColor(.white)
                 Text(channel.liveProgram.title)
                     .font(
-                        .custom(
-                        "AmericanTypewriter",
-                        fixedSize: 15)
+                        .custom("AmericanTypewriter", fixedSize: 15)
                     )
                     .foregroundColor(.white)
                     .padding(.bottom, 10)
