@@ -16,7 +16,6 @@
 		B60FEE9F29F3394D005824AF /* ContentRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FEE9E29F3394D005824AF /* ContentRequests.swift */; };
 		B60FEEA629F33ADF005824AF /* MovistarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FEEA529F33ADF005824AF /* MovistarAPI.swift */; };
 		B6550CB729F2D3A200267128 /* LiveChannelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CB629F2D3A200267128 /* LiveChannelsApp.swift */; };
-		B6550CB929F2D3A200267128 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CB829F2D3A200267128 /* ContentView.swift */; };
 		B6550CBB29F2D3A400267128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6550CBA29F2D3A400267128 /* Assets.xcassets */; };
 		B6550CBE29F2D3A400267128 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6550CBD29F2D3A400267128 /* Preview Assets.xcassets */; };
 		B6550CC729F2D41C00267128 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6550CC629F2D41C00267128 /* MainRouter.swift */; };
@@ -53,7 +52,6 @@
 		B60FEEA529F33ADF005824AF /* MovistarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovistarAPI.swift; sourceTree = "<group>"; };
 		B6550CB329F2D3A200267128 /* LiveChannels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveChannels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6550CB629F2D3A200267128 /* LiveChannelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsApp.swift; sourceTree = "<group>"; };
-		B6550CB829F2D3A200267128 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B6550CBA29F2D3A400267128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6550CBD29F2D3A400267128 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6550CC629F2D41C00267128 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				B6550CC829F2D46300267128 /* Extensions */,
 				B6550CC429F2D3E800267128 /* Modules */,
 				B6550CB629F2D3A200267128 /* LiveChannelsApp.swift */,
-				B6550CB829F2D3A200267128 /* ContentView.swift */,
 				B6550CBA29F2D3A400267128 /* Assets.xcassets */,
 				B6550CBC29F2D3A400267128 /* Preview Content */,
 			);
@@ -395,7 +392,6 @@
 				B60FEE9B29F338F7005824AF /* URLSession+Extension.swift in Sources */,
 				B6550CD529F2D5E900267128 /* URLRequest+Extension.swift in Sources */,
 				B60FEEA629F33ADF005824AF /* MovistarAPI.swift in Sources */,
-				B6550CB929F2D3A200267128 /* ContentView.swift in Sources */,
 				B6E84C7D29F4907800FD2F20 /* ChannelDetailsScreen.swift in Sources */,
 				B6E84C7229F400FA00FD2F20 /* ImageCache.swift in Sources */,
 				B6550CD329F2D5D100267128 /* View+Extension.swift in Sources */,

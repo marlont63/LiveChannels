@@ -51,6 +51,7 @@ struct MainScreen: View {
             }
             .padding(.top, 80)
         }
+        .padding(.bottom, 50)
         .edgesIgnoringSafeArea(.all)
         .onAppear(perform: {
             mainViewModel.getLiveChannels()
@@ -67,7 +68,8 @@ struct ChannelCardView: View {
         HStack(spacing: .zero) {
             if let imageURL: URL = URL(string: channel.logo) {
                 ImageFromUrl(url: imageURL, isGeometryFrameUsed: true)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 50, height: 50)
+                    .padding(.leading, 10)
             }
             VStack(alignment: .leading, spacing: .zero) {
                 Text(channel.name)
@@ -85,6 +87,15 @@ struct ChannelCardView: View {
                     .foregroundColor(.white)
                     .padding(.bottom, 10)
                 
+                HStack(spacing: .zero) {
+                    Spacer()
+                    Text("Progreso: \(Int(liveProgramPercentage * 100)) %")
+                        .font(
+                            .custom("AmericanTypewriter", fixedSize: 10)
+                        )
+                        .foregroundColor(.white)
+                }
+                .padding(.bottom, 3)
                 LinearProgressBar(
                     value: liveProgramPercentage,
                     maxValue: Constants.totalProgress,
@@ -92,12 +103,27 @@ struct ChannelCardView: View {
                     foregroundColor: .green
                 )
                 .frame(height: 6)
+                .padding(.bottom, 3)
+                
+                HStack(spacing: .zero) {
+                    Text(channel.liveProgram.startTime.stringToDate())
+                        .font(
+                            .custom("AmericanTypewriter", fixedSize: 10)
+                        )
+                        .foregroundColor(.white)
+                    Spacer()
+                    Text(channel.liveProgram.endTime.stringToDate())
+                        .font(
+                            .custom("AmericanTypewriter", fixedSize: 10)
+                        )
+                        .foregroundColor(.white)
+                }
             }
             .padding(.horizontal, 10)
             .padding(.vertical , 10)
         }
         .frame(maxWidth: .infinity)
-        .background(Color.blue)
+        .background(Color.black.opacity(0.8))
         .cornerRadius(4.0)
         .padding(.bottom, 5)
         .padding(.horizontal, 16)

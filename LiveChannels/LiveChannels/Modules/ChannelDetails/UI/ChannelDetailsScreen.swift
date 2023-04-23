@@ -16,35 +16,31 @@ struct ChannelDetailsScreen: View {
     
     var body: some View {
         VStack(spacing: .zero) {
-            HStack(spacing: .zero) {
-                Text("Live program details")
-                    .font(
-                        .custom("AmericanTypewriter", fixedSize: 34)
-                        .weight(.heavy)
-                    )
-                    .padding(.leading, 16)
-                Spacer()
-                Button(action: {
-                    self.goBack()
-                }) {
-                    Image(systemName: "multiply.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .padding(.trailing, 16)
-                }
-            }
-            .padding(.top, 50)
             switch channelDetailsViewModel.channelDetailsViewData.status {
             case .running:
                 LoadingView()
             case .success:
                 if let channelDetails: ChannelDetails = channelDetailsViewModel.channelDetailsViewData.data {
-                    VStack(spacing: .zero) {
+                    HStack(spacing: .zero) {
                         Text(channelDetails.title)
                             .font(
-                                .custom("AmericanTypewriter", fixedSize: 20)
-                                .weight(.bold)
+                                .custom("AmericanTypewriter", fixedSize: 34)
+                                .weight(.heavy)
                             )
+                            .padding(.leading, 16)
+                        Spacer()
+                        Button(action: {
+                            self.goBack()
+                        }) {
+                            Image(systemName: "multiply.circle.fill")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .padding(.trailing, 16)
+                        }
+                    }
+                    .padding(.top, 50)
+                    
+                    VStack(spacing: .zero) {
                         HStack(spacing: .zero) {
                             if let coverURL: URL = URL(string: channelDetails.cover) {
                                 ImageFromUrl(url: coverURL, isGeometryFrameUsed: true)
