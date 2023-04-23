@@ -20,6 +20,7 @@ class ChannelDetailsViewModel: BaseViewModel, ObservableObject {
     }
     
     func getChannelDetails() {
+        self.channelDetailsViewData = ChannelDetailsViewData(status: .running)
         apiClient.getLiveChannelDetails()
             .sink { completion in
                 switch completion {

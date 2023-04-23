@@ -34,6 +34,7 @@ struct ChannelDetailsScreen: View {
                         }) {
                             Image(systemName: "multiply.circle.fill")
                                 .resizable()
+                                .foregroundColor(.black)
                                 .frame(width: 30, height: 30)
                                 .padding(.trailing, 16)
                         }
@@ -50,18 +51,48 @@ struct ChannelDetailsScreen: View {
                         .padding(.top, 15)
                         .padding(.bottom, 15)
                         
+                        let liveProgramPercentage: Double = channelDetailsViewModel.getLiveProgramPercentage(
+                            startTime: channelDetails.startTime,
+                            endTime: channelDetails.endTime,
+                            currentTime: channelDetailsViewModel.currentTime)
+                        
+                        HStack(spacing: .zero) {
+                            Spacer()
+                            Text("Progreso: \(Int(liveProgramPercentage * 100)) %")
+                                .font(
+                                    .custom("AmericanTypewriter", fixedSize: 15)
+                                )
+                                .foregroundColor(.black)
+                        }
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 3)
+                        
                         LinearProgressBar(
-                            value: channelDetailsViewModel.getLiveProgramPercentage(
-                                startTime: channelDetails.startTime,
-                                endTime: channelDetails.endTime,
-                                currentTime: channelDetailsViewModel.currentTime),
+                            value: liveProgramPercentage,
                             maxValue: Constants.totalProgress,
                             backgroundColor: .gray,
                             foregroundColor: .green
                         )
                         .frame(height: 10)
                         .padding(.horizontal, 16)
+                        .padding(.bottom, 5)
+                        
+                        HStack(spacing: .zero) {
+                            Text(channelDetails.startTime.stringToDate())
+                                .font(
+                                    .custom("AmericanTypewriter", fixedSize: 15)
+                                )
+                                .foregroundColor(.black)
+                            Spacer()
+                            Text(channelDetails.endTime.stringToDate())
+                                .font(
+                                    .custom("AmericanTypewriter", fixedSize: 15)
+                                )
+                                .foregroundColor(.black)
+                        }
+                        .padding(.horizontal, 16)
                         .padding(.bottom, 15)
+                        
                         
                         Group {
                             Text(channelDetails.description)

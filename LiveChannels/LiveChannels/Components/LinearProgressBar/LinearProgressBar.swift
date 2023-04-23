@@ -36,7 +36,7 @@ struct LinearProgressBar: View {
                 }
 
                 Capsule()
-                    .frame(width: self.progress(value: self.value,
+                    .frame(maxWidth: self.progress(value: self.value,
                                                 maxValue: self.maxValue,
                                                 width: geometryReader.size.width))
                     .foregroundColor(self.foregroundColor)

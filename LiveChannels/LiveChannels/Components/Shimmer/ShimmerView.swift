@@ -31,6 +31,7 @@ public struct ShimmerView: View {
 struct LoadingView: View {
     var body: some View {
         VStack(alignment: .leading) {
+            Spacer()
             ShimmerView()
                 .frame(width: UIScreen.main.bounds.width / 2, height: 20)
             ShimmerView()
@@ -39,6 +40,7 @@ struct LoadingView: View {
                 .frame(height: 52)
             ShimmerView()
                 .frame(height: 52)
+            Spacer()
         }.padding()
     }
 }
